@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Order Form — Basket Bliss Boutique</title>
+<meta name="description" content="Start your custom gift basket order with Basket Bliss Boutique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a href="index.html" class="brand">Basket Bliss Boutique</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="past-creations.html">Past Creations</a></li>
+      <li><a href="order-policies.html">Order Policies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="custom-order-form.html" class="nav-cta active">Order Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-head container">
+  <span class="eyebrow">Let's get started</span>
+  <h1>Custom Order Form</h1>
+  <p class="lede">Tell us your story — we'll craft the basket.</p>
+</div>
+
+<section>
+  <div class="container">
+    <!--
+      SETUP NOTE FOR WHOEVER MAINTAINS THIS SITE:
+      This form uses Formspree (https://formspree.io) so it can submit without
+      a backend server. Free tier: 50 submissions/month.
+      1. Create a free Formspree account and a new form.
+      2. Replace YOUR_FORM_ID below with the ID Formspree gives you.
+      3. Test it once by submitting the live form yourself.
+    -->
+    <form class="order-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div>
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div>
+          <label for="date">Date needed</label>
+          <input type="date" id="date" name="date needed" required>
+        </div>
+      </div>
+
+      <div>
+        <label for="occasion">Occasion</label>
+        <select id="occasion" name="occasion">
+          <option>Holiday / Christmas</option>
+          <option>Birthday</option>
+          <option>Thank you / Client gift</option>
+          <option>Congratulations</option>
+          <option>Sympathy</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div>
+          <label for="budget">Approximate budget</label>
+          <input type="text" id="budget" name="budget" placeholder="e.g. $75–100">
+        </div>
+        <div>
+          <label for="fulfilment">Pick-up or delivery?</label>
+          <select id="fulfilment" name="fulfilment">
+            <option>Pick-up</option>
+            <option>Delivery</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="alcohol">Include alcohol?</label>
+        <select id="alcohol" name="alcohol">
+          <option>No</option>
+          <option>Yes, I'll provide it</option>
+          <option>Yes, please arrange it</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="details">Tell us about the recipient & your vision</label>
+        <textarea id="details" name="details" placeholder="Favourite treats, allergies, colours, theme, anything that helps us capture their story..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit order request</button>
+      <p class="form-note">A 50% deposit secures your order once we confirm the details and quote with you directly. See our <a href="order-policies.html">order policies</a> for more.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Basket Bliss Boutique</h3>
+        <p>Woodbridge, Ontario</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <p><a href="past-creations.html">Past Creations</a></p>
+        <p><a href="order-policies.html">Order Policies</a></p>
+        <p><a href="custom-order-form.html">Custom Order Form</a></p>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p><a href="contact.html">Contact Us</a></p>
+        <p><a href="https://www.instagram.com/basketblissboutique/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Basket Bliss Boutique. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
